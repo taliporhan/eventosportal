@@ -125,7 +125,6 @@ img {
   color: var(--green-deep);
 }
 
-.nav-cta,
 .button {
   display: inline-flex;
   align-items: center;
@@ -141,12 +140,10 @@ img {
     background-color 0.18s ease;
 }
 
-.nav-cta:hover,
 .button:hover {
   transform: translateY(-1px);
 }
 
-.nav-cta,
 .button-green {
   background: var(--green);
   color: #05140a;
@@ -942,8 +939,7 @@ img {
     font-size: 3.3rem;
   }
 
-  .button,
-  .nav-cta {
+  .button {
     width: 100%;
   }
 
