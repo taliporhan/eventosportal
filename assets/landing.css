@@ -169,14 +169,12 @@ img {
 .hero-section,
 .feature-section,
 .screens-section,
-.reason-section,
-.contact-section {
+.reason-section {
   padding: 84px 0;
 }
 
 .hero-grid,
 .screens-layout,
-.contact-grid,
 .reason-shell {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 480px);
@@ -448,9 +446,7 @@ img {
 }
 
 .feature-card,
-.bullet-card,
-.contact-card,
-.faq-column details {
+.bullet-card {
   padding: 26px;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
@@ -471,8 +467,7 @@ img {
   font-weight: 800;
 }
 
-.feature-card h3,
-.contact-card h3 {
+.feature-card h3 {
   margin: 0 0 10px;
   font-size: 22px;
   letter-spacing: -0.04em;
@@ -480,8 +475,6 @@ img {
 
 .feature-card p,
 .bullet-card p,
-.contact-card p,
-.faq-column details p,
 .reason-list li {
   margin: 0;
   color: var(--muted);
@@ -932,7 +925,6 @@ img {
 @media (max-width: 1080px) {
   .hero-grid,
   .screens-layout,
-  .contact-grid,
   .reason-shell,
   .inner-hero,
   .legal-layout,
