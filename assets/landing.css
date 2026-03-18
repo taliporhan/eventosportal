@@ -662,58 +662,6 @@ img {
   padding: 28px 0 44px;
 }
 
-.cta-section {
-  padding: 0 0 88px;
-}
-
-.cta-banner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 28px;
-  align-items: center;
-  padding: 34px;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #0f172a 0%, #15361f 100%);
-  color: #fff;
-  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.18);
-}
-
-.cta-banner small {
-  display: block;
-  margin-bottom: 10px;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.cta-banner h2 {
-  margin: 0 0 10px;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.02;
-  letter-spacing: -0.06em;
-}
-
-.cta-banner p {
-  max-width: 720px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.76);
-  line-height: 1.75;
-}
-
-.cta-actions {
-  display: grid;
-  gap: 12px;
-  min-width: 240px;
-}
-
-.cta-banner .button-outline {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.16);
-  color: #fff;
-}
-
 .inner-hero-section,
 .content-section {
   padding: 72px 0;
@@ -927,8 +875,7 @@ img {
   .screens-layout,
   .reason-shell,
   .inner-hero,
-  .legal-layout,
-  .cta-banner {
+  .legal-layout {
     grid-template-columns: 1fr;
   }
 
