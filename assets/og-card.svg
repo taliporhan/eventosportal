@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">EventOS</title>
+  <desc id="desc">Düğün salonu ve etkinlik mekanı operasyonlarını tek merkezde yönetin.</desc>
+  <defs>
+    <radialGradient id="glowA" cx="18%" cy="18%" r="42%">
+      <stop offset="0%" stop-color="#47bd89" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#47bd89" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="84%" cy="20%" r="32%">
+      <stop offset="0%" stop-color="#d9af6b" stop-opacity=".32"/>
+      <stop offset="100%" stop-color="#d9af6b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15110d"/>
+      <stop offset="100%" stop-color="#241c15"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0f0c09"/>
+  <rect width="1200" height="630" fill="url(#glowA)"/>
+  <rect width="1200" height="630" fill="url(#glowB)"/>
+  <g opacity=".08" stroke="#f5ede1">
+    <path d="M0 108h1200"/>
+    <path d="M0 166h1200"/>
+    <path d="M0 224h1200"/>
+    <path d="M0 282h1200"/>
+    <path d="M0 340h1200"/>
+    <path d="M0 398h1200"/>
+    <path d="M0 456h1200"/>
+  </g>
+  <rect x="64" y="64" width="1072" height="502" rx="40" fill="url(#panel)" stroke="rgba(255,255,255,.1)"/>
+  <rect x="96" y="96" width="108" height="108" rx="28" fill="rgba(217,175,107,.14)" stroke="rgba(217,175,107,.25)"/>
+  <text x="128" y="165" fill="#f5ede1" font-size="72" font-family="Georgia, serif" font-weight="700">E</text>
+  <text x="240" y="154" fill="#f5ede1" font-size="34" font-family="Arial, sans-serif" font-weight="700">EventOS</text>
+  <text x="240" y="194" fill="#b9ad9a" font-size="17" font-family="Arial, sans-serif" letter-spacing="4">HOSPITALITY OPERATIONS</text>
+  <text x="96" y="304" fill="#f5ede1" font-size="86" font-family="Georgia, serif" font-weight="700">
+    Düğün salonu operasyonunu
+  </text>
+  <text x="96" y="392" fill="#f5ede1" font-size="86" font-family="Georgia, serif" font-weight="700">
+    tek merkezde yönetin.
+  </text>
+  <text x="96" y="470" fill="#b9ad9a" font-size="28" font-family="Arial, sans-serif">
+    Rezervasyon, finans, paket, personel ve destek bağlantıları
+  </text>
+  <text x="96" y="510" fill="#b9ad9a" font-size="28" font-family="Arial, sans-serif">
+    modern, yayınlanabilir bir mini site içinde bir arada.
+  </text>
+  <g transform="translate(806 282)">
+    <rect width="264" height="184" rx="28" fill="#f5ede1"/>
+    <text x="28" y="52" fill="#6d6258" font-size="16" font-family="Arial, sans-serif" letter-spacing="2">LIVE OPS</text>
+    <text x="28" y="102" fill="#1c140e" font-size="34" font-family="Arial, sans-serif" font-weight="700">Rezervasyon</text>
+    <text x="28" y="140" fill="#1c140e" font-size="34" font-family="Arial, sans-serif" font-weight="700">Finans</text>
+    <text x="28" y="178" fill="#1c140e" font-size="34" font-family="Arial, sans-serif" font-weight="700">Personel</text>
+  </g>
+</svg>

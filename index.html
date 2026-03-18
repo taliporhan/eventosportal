@@ -3,302 +3,263 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EventOS</title>
-    <style>
-      :root {
-        --bg: #f4f7f4;
-        --surface: rgba(255, 255, 255, 0.92);
-        --surface-strong: #ffffff;
-        --text: #0f172a;
-        --muted: #5b6b7f;
-        --line: #dde5df;
-        --accent: #13ec5b;
-        --accent-dark: #0d3a1b;
-        --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "SF Pro Display", "Inter", "Segoe UI", sans-serif;
-        color: var(--text);
-        background:
-          radial-gradient(circle at top right, rgba(19, 236, 91, 0.18), transparent 24%),
-          linear-gradient(180deg, #fbfdfb 0%, var(--bg) 100%);
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .shell {
-        max-width: 980px;
-        margin: 0 auto;
-        padding: 32px 20px 56px;
-      }
-
-      .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-        gap: 24px;
-        align-items: stretch;
-      }
-
-      .panel {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 30px;
-        box-shadow: var(--shadow);
-        backdrop-filter: blur(14px);
-      }
-
-      .hero-copy {
-        padding: 32px;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 18px;
-      }
-
-      .brand-mark {
-        width: 52px;
-        height: 52px;
-        border-radius: 18px;
-        background: rgba(19, 236, 91, 0.12);
-        display: grid;
-        place-items: center;
-        color: var(--accent-dark);
-        font-weight: 900;
-        font-size: 24px;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        background: rgba(15, 23, 42, 0.05);
-        color: var(--muted);
-        font-size: 13px;
-        font-weight: 700;
-      }
-
-      h1 {
-        margin: 14px 0 10px;
-        font-size: clamp(38px, 6vw, 60px);
-        line-height: 0.95;
-        letter-spacing: -0.05em;
-      }
-
-      .lead {
-        margin: 0;
-        font-size: 18px;
-        line-height: 1.6;
-        color: var(--muted);
-        max-width: 34rem;
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 26px;
-      }
-
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 52px;
-        padding: 0 18px;
-        border-radius: 16px;
-        border: 1px solid var(--line);
-        background: var(--surface-strong);
-        font-weight: 800;
-      }
-
-      .button-primary {
-        background: var(--accent);
-        border-color: var(--accent);
-        color: #092411;
-      }
-
-      .hero-card {
-        padding: 24px;
-        display: grid;
-        gap: 16px;
-      }
-
-      .metric {
-        padding: 18px;
-        border-radius: 22px;
-        border: 1px solid var(--line);
-        background: #fff;
-      }
-
-      .metric small {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--muted);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .metric strong {
-        display: block;
-        font-size: 22px;
-        line-height: 1.1;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-        margin-top: 24px;
-      }
-
-      .card {
-        padding: 22px;
-        border-radius: 24px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: var(--shadow);
-      }
-
-      .card h2 {
-        margin: 0 0 10px;
-        font-size: 22px;
-        letter-spacing: -0.03em;
-      }
-
-      .card p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.65;
-      }
-
-      .card ul {
-        margin: 14px 0 0;
-        padding-left: 18px;
-        color: var(--muted);
-        line-height: 1.75;
-      }
-
-      .footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 12px;
-        margin-top: 28px;
-        color: var(--muted);
-        font-size: 14px;
-      }
-
-      .footer-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      @media (max-width: 860px) {
-        .hero,
-        .grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-copy,
-        .hero-card,
-        .card {
-          padding: 24px;
+    <title>EventOS — Düğün Salonu Operasyonunu Tek Merkezde Yönetin</title>
+    <meta
+      name="description"
+      content="EventOS; düğün salonu ve etkinlik mekanı işletmeleri için rezervasyon, finans, paket ve personel süreçlerini tek akışta birleştiren operasyon platformudur."
+    />
+    <link rel="canonical" href="https://eventosportal.com/" />
+    <meta
+      property="og:title"
+      content="EventOS — Düğün Salonu Operasyonunu Tek Merkezde Yönetin"
+    />
+    <meta
+      property="og:description"
+      content="Rezervasyon, finans, paket ve ekip yönetimini aynı operasyon dili içinde toplayan EventOS mini sitesine göz atın."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eventosportal.com/" />
+    <meta
+      property="og:image"
+      content="https://eventosportal.com/assets/og-card.svg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="EventOS — Düğün Salonu Operasyonunu Tek Merkezde Yönetin"
+    />
+    <meta
+      name="twitter:description"
+      content="Düğün salonu operasyonları için tasarlanmış modern rezervasyon, finans ve ekip yönetimi deneyimi."
+    />
+    <meta
+      name="twitter:image"
+      content="https://eventosportal.com/assets/og-card.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/site.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EventOS",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "iOS",
+        "url": "https://eventosportal.com/",
+        "description": "Düğün salonu ve etkinlik mekanı operasyonlarını tek merkezde yönetmek için geliştirilen mobil işletme yönetim uygulaması.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "TRY"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "EventOS",
+          "email": "talipporhan@icloud.com"
         }
       }
-    </style>
+    </script>
   </head>
-  <body>
-    <main class="shell">
-      <section class="hero">
-        <article class="panel hero-copy">
-          <div class="brand">
-            <div class="brand-mark">E</div>
-            <span class="eyebrow">EventOS</span>
-          </div>
-          <h1>Düğün salonu operasyonunu tek merkezde yönetin.</h1>
-          <p class="lead">
-            EventOS; rezervasyon, takvim, paket, finans ve personel süreçlerini
-            aynı iş akışında toplayan mobil işletme yönetim uygulamasıdır.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="./support.html">Destek Sayfası</a>
-            <a class="button" href="./privacy-policy.html">Gizlilik Politikası</a>
-            <a class="button" href="./terms-of-use.html">Kullanım Şartları</a>
-          </div>
-        </article>
+  <body class="page-home">
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html" aria-label="EventOS ana sayfa">
+          <span class="brand-mark">E</span>
+          <span class="brand-copy">
+            <strong>EventOS</strong>
+            <span>Hospitality Operations</span>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Ana gezinme">
+          <a class="nav-link" href="./index.html" aria-current="page">Ana Sayfa</a>
+          <a class="nav-link" href="./support.html">Destek</a>
+          <a class="nav-link" href="./privacy-policy.html">Gizlilik</a>
+          <a class="nav-link" href="./terms-of-use.html">Şartlar</a>
+        </nav>
+      </header>
 
-        <aside class="panel hero-card">
-          <div class="metric">
-            <small>Odak</small>
-            <strong>Rezervasyon ve tahsilat takibi</strong>
-          </div>
-          <div class="metric">
-            <small>Kullanım</small>
-            <strong>Salon, paket, ekip ve finans yönetimi</strong>
-          </div>
-          <div class="metric">
-            <small>İletişim</small>
-            <strong>talipporhan@icloud.com</strong>
-          </div>
-        </aside>
-      </section>
+      <main id="icerik">
+        <section class="hero-grid">
+          <article class="surface-dark hero-copy">
+            <span class="eyebrow">EventOS Hospitality Suite</span>
+            <h1>Salon operasyonu, finans ve ekip koordinasyonu tek ritimde.</h1>
+            <p>
+              EventOS, düğün salonu ve etkinlik mekanı ekipleri için
+              <strong>rezervasyon akışını</strong>,
+              <strong>nakit görünürlüğünü</strong> ve
+              <strong>saha organizasyonunu</strong> aynı kontrol dilinde buluşturur.
+              Uygulama; dağınık notlar, manuel takip ve son dakika karmaşası yerine
+              daha sakin, daha görünür ve daha yönetilebilir bir işletme ritmi kurar.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="./support.html">Destek kanallarını aç</a>
+              <a class="button button-secondary" href="./privacy-policy.html">Yasal sayfaları incele</a>
+            </div>
+            <div class="marquee" aria-hidden="true">
+              <div class="marquee-track">
+                <span>Rezervasyon akışı</span>
+                <span>Nakit görünürlüğü</span>
+                <span>Paket kurgusu</span>
+                <span>Takvim disiplini</span>
+                <span>Personel koordinasyonu</span>
+                <span>Rezervasyon akışı</span>
+                <span>Nakit görünürlüğü</span>
+                <span>Paket kurgusu</span>
+                <span>Takvim disiplini</span>
+                <span>Personel koordinasyonu</span>
+              </div>
+            </div>
+          </article>
 
-      <section class="grid">
-        <article class="card">
-          <h2>Destek</h2>
-          <p>
-            Kurulum, hesap, erişim, ödeme veya teknik sorunlar için destek
-            sayfasına gidin.
-          </p>
-          <ul>
-            <li>Destek e-postası</li>
-            <li>Sık sorulan sorular</li>
-            <li>Yanıt süresi bilgisi</li>
-          </ul>
-        </article>
+          <aside class="surface-paper hero-board" aria-label="Operasyon özeti">
+            <div class="board-heading">
+              <h2>Operasyon panosu</h2>
+              <span>Canlı bakış</span>
+            </div>
+            <div class="board-stack">
+              <article class="stat-card">
+                <small>Rezervasyon disiplini</small>
+                <strong>Takvim, çakışma ve müşteri detayları tek akışta</strong>
+              </article>
+              <div class="board-split">
+                <article class="stat-card">
+                  <small>Finans</small>
+                  <strong>Tahsilat, taksit ve gider görünürlüğü</strong>
+                </article>
+                <article class="stat-card">
+                  <small>Ekip</small>
+                  <strong>Atama, görev ve sahadaki iş yükü</strong>
+                </article>
+              </div>
+              <article class="timeline-card">
+                <small>Neden bu mini site var?</small>
+                <p>
+                  App Store ve kullanıcı desteği için gerekli tüm bağlantılar
+                  tek bir yayınlanabilir alan adı altında toplanır.
+                </p>
+              </article>
+            </div>
+          </aside>
+        </section>
 
-        <article class="card">
-          <h2>Gizlilik</h2>
-          <p>
-            EventOS içinde işlenen veriler, amaçları ve KVKK kapsamındaki
-            haklarınız için gizlilik politikasını inceleyin.
-          </p>
-        </article>
+        <section class="section">
+          <div class="section-intro">
+            <div class="section-kicker">Operasyon Katmanları</div>
+            <h2 class="section-title">Bir mekanın günlük yükünü bölmeden yöneten modüller.</h2>
+            <p class="section-lead">
+              EventOS, tek bir “özellik listesi” gibi davranmaz. Mekanın gerçek
+              çalışma düzeni etrafında şekillenen, birbirine bağlı operasyon katmanları kurar.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <small>Rezervasyon</small>
+              <h3>Müşteri sürecini dağılmadan takip edin.</h3>
+              <p>
+                Etkinlik tarihi, paket seçimi, ödeme planı ve müşteri notları aynı kayıt içinde kalır.
+              </p>
+              <div class="tag-row">
+                <span class="tag">Takvim</span>
+                <span class="tag">Müşteri</span>
+                <span class="tag">Paket</span>
+              </div>
+            </article>
+            <article class="feature-card">
+              <small>Finans</small>
+              <h3>Tahsilatı ve gideri aynı tabloya düşürmeyin.</h3>
+              <p>
+                Giriş yapan her tahsilat ve çıkan her gider, karar vermeyi hızlandıran daha temiz bir finans görünümü üretir.
+              </p>
+            </article>
+            <article class="feature-card">
+              <small>Ekip</small>
+              <h3>Sahadaki yükü kim, ne zaman taşıyor görün.</h3>
+              <p>
+                Personel atamaları, etkinlik günü hazırlık baskısını azaltır.
+              </p>
+            </article>
+            <article class="feature-card">
+              <small>Destek</small>
+              <h3>Yasal ve destek bağlantıları mağaza gereksinimlerine hazırdır.</h3>
+              <p>
+                Destek, gizlilik politikası ve kullanım şartları sayfaları tek alan adı altında yayınlanır.
+              </p>
+            </article>
+            <article class="feature-card">
+              <small>Yayın</small>
+              <h3>Markaya daha yakın, daha düzenli ve daha güven veren dış yüz.</h3>
+              <p>
+                Bu mini site; uygulama için resmi, sade ve mağaza onay süreçlerine uygun bir vitrin görevi görür.
+              </p>
+            </article>
+          </div>
+        </section>
 
-        <article class="card">
-          <h2>Kullanım Şartları</h2>
-          <p>
-            Hesap kullanımı, abonelik, yasaklı kullanımlar ve sorumluluk sınırı
-            hakkında güncel şartları görün.
-          </p>
-        </article>
-      </section>
+        <section class="section content-grid">
+          <article class="surface-paper hero-board">
+            <div class="board-heading">
+              <h2>Gerekli bağlantılar</h2>
+              <span>Store ready</span>
+            </div>
+            <div class="board-stack">
+              <article class="note-card">
+                <small>Destek sayfası</small>
+                <h3><a href="./support.html">Yardım, iletişim ve sık sorulanlar</a></h3>
+                <p>
+                  Hesap, giriş, abonelik ve veri ile ilgili destek kanallarına buradan erişilir.
+                </p>
+              </article>
+              <article class="note-card">
+                <small>Gizlilik politikası</small>
+                <h3><a href="./privacy-policy.html">KVKK ve veri işleme açıklamaları</a></h3>
+                <p>
+                  Hangi verilerin işlendiği, neden işlendiği ve haklarınız açık şekilde listelenir.
+                </p>
+              </article>
+              <article class="note-card">
+                <small>Kullanım şartları</small>
+                <h3><a href="./terms-of-use.html">Hesap, abonelik ve sorumluluk sınırları</a></h3>
+                <p>
+                  Uygulamanın kullanım kuralları ve ticari çerçevesi bu sayfada yer alır.
+                </p>
+              </article>
+            </div>
+          </article>
+
+          <article class="surface-dark hero-copy">
+            <span class="eyebrow">İletişim</span>
+            <h2 class="section-title">Tek temas noktası, net yanıt akışı.</h2>
+            <p>
+              Teknik destek ve mağaza gereksinimleri için tek bir alan adı kullanmak
+              kullanıcı güvenini artırır, destek iletişimini sadeleştirir ve ekip içinde
+              hangi bağlantının nerede kullanılacağını netleştirir.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="mailto:talipporhan@icloud.com">Destek e-postası aç</a>
+              <a class="button button-secondary" href="./support.html#sss">SSS bölümüne git</a>
+            </div>
+          </article>
+        </section>
+      </main>
 
       <footer class="footer">
-        <span>Son güncelleme: 15 Mart 2026</span>
-        <nav class="footer-nav">
+        <p class="footer-copy">
+          EventOS mini sitesi, ürün desteği ve mağaza gereksinimleri için yayınlanır.
+        </p>
+        <nav class="footer-nav" aria-label="Alt gezinme">
           <a href="./support.html">Destek</a>
           <a href="./privacy-policy.html">Gizlilik Politikası</a>
           <a href="./terms-of-use.html">Kullanım Şartları</a>
+          <a href="mailto:talipporhan@icloud.com">talipporhan@icloud.com</a>
         </nav>
       </footer>
-    </main>
+    </div>
   </body>
 </html>
