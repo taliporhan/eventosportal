@@ -42,11 +42,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Manrope:wght@400;500;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./assets/site.css" />
+    <link rel="stylesheet" href="./assets/landing.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -56,73 +56,85 @@
       }
     </script>
   </head>
-  <body class="page-legal">
+  <body>
     <a class="skip-link" href="#icerik">İçeriğe geç</a>
-    <div class="site-shell">
-      <header class="site-header">
+
+    <header class="site-header">
+      <div class="container nav-shell">
         <a class="brand" href="./index.html" aria-label="EventOS ana sayfa">
           <span class="brand-mark">E</span>
-          <span class="brand-copy">
-            <strong>EventOS</strong>
-            <span>Hospitality Operations</span>
-          </span>
+          <span class="brand-text">EventOS</span>
         </a>
         <nav class="nav-links" aria-label="Ana gezinme">
-          <a class="nav-link" href="./index.html">Ana Sayfa</a>
-          <a class="nav-link" href="./support.html">Destek</a>
-          <a class="nav-link" href="./privacy-policy.html" aria-current="page">Gizlilik</a>
-          <a class="nav-link" href="./terms-of-use.html">Şartlar</a>
+          <a href="./index.html#ozellikler">Özellikler</a>
+          <a href="./index.html#ekranlar">Ekranlar</a>
+          <a href="./index.html#neden">Neden Biz?</a>
+          <a href="./support.html">Destek</a>
         </nav>
-      </header>
+        <a class="nav-cta" href="./support.html">Destek</a>
+      </div>
+    </header>
 
-      <main id="icerik">
-        <section class="surface-dark page-hero">
-          <span class="eyebrow">Legal / Privacy</span>
-          <h1>Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
-          <p class="legal-lead">
-            Bu metin, EventOS mobil uygulamasını kullanan işletme sahipleri ve yetkili
-            kullanıcılar için hazırlanmıştır. Verilerin hangi amaçlarla işlendiğini, hangi
-            altyapılarla sınırlı şekilde paylaşıldığını ve hangi haklara sahip olduğunuzu burada bulabilirsiniz.
-          </p>
-          <div class="page-hero-meta">
-            <span class="meta-pill">Son güncelleme: 18 Mart 2026</span>
-            <span class="meta-pill">İletişim: talipporhan@icloud.com</span>
-            <span class="meta-pill">Kapsam: EventOS mobil uygulaması</span>
+    <main id="icerik">
+      <section class="inner-hero-section">
+        <div class="container inner-hero">
+          <div class="inner-hero-copy">
+            <span class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Legal / Privacy
+            </span>
+            <h1>Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
+            <p>
+              Bu metin, EventOS mobil uygulamasını kullanan işletme sahipleri ve
+              yetkili kullanıcılar için hazırlanmıştır. Verilerin hangi amaçlarla
+              işlendiğini ve hangi haklara sahip olduğunuzu burada bulabilirsiniz.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Son güncelleme: 18 Mart 2026</span>
+              <span class="pill">İletişim: talipporhan@icloud.com</span>
+              <span class="pill">Kapsam: EventOS mobil uygulaması</span>
+            </div>
           </div>
-        </section>
 
-        <section class="legal-grid">
-          <aside class="legal-sidebar">
-            <article class="meta-card">
+          <div class="inner-panel">
+            <div class="summary-card">
               <small>Özet</small>
-              <strong>Veriler hizmet sunumu, güvenlik ve destek için işlenir.</strong>
+              <h3>Veriler hizmet sunumu, güvenlik ve destek için işlenir.</h3>
               <p>
-                EventOS; rezervasyon, mekan, finans, paket ve ekip süreçlerini çalıştırmak için
-                gerekli kişisel verileri sınırlı ve amaçla bağlantılı biçimde işler.
+                EventOS; rezervasyon, mekan, finans, paket ve ekip süreçlerini
+                çalıştırmak için gerekli kişisel verileri sınırlı ve amaçla
+                bağlantılı biçimde işler.
               </p>
-            </article>
-            <article class="meta-card">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section legal-section">
+        <div class="container legal-layout">
+          <aside class="legal-sidebar">
+            <div class="summary-card">
               <small>Hızlı gezinme</small>
-              <nav class="legal-nav" aria-label="Gizlilik başlıkları">
+              <nav class="toc">
                 <a href="#veri-sorumlusu">Veri sorumlusu</a>
                 <a href="#islenen-veriler">İşlenen veriler</a>
                 <a href="#amaclar">Amaçlar</a>
                 <a href="#aktarim">Veri aktarımı</a>
                 <a href="#haklariniz">Haklarınız</a>
               </nav>
-            </article>
-            <article class="note-card">
-              <small>Destek</small>
+            </div>
+            <div class="summary-card">
+              <small>İletişim</small>
               <h3>Hak kullanımı ve veri talepleri</h3>
               <p>
                 Sorularınız veya veri talebiniz için
-                <a href="mailto:talipporhan@icloud.com">talipporhan@icloud.com</a>
+                <a class="inline-link" href="mailto:talipporhan@icloud.com">talipporhan@icloud.com</a>
                 adresinden bize ulaşabilirsiniz.
               </p>
-            </article>
+            </div>
           </aside>
 
-          <article class="legal-article">
+          <article class="legal-body">
             <p>
               EventOS; rezervasyon, salon, finans, paket ve personel yönetimini kolaylaştırmak
               amacıyla kişisel verilerinizi işler. Bu sayfa, verilerin hangi kapsamda işlendiğini
@@ -131,7 +143,7 @@
 
             <h2 id="veri-sorumlusu">1. Veri Sorumlusu</h2>
             <p>Bu uygulama kapsamında işlenen veriler için veri sorumlusu, uygulamayı sunan EventOS işletmesidir.</p>
-            <p>İletişim: <a href="mailto:talipporhan@icloud.com">talipporhan@icloud.com</a></p>
+            <p>İletişim: <a class="inline-link" href="mailto:talipporhan@icloud.com">talipporhan@icloud.com</a></p>
 
             <h2 id="islenen-veriler">2. İşlenen Veriler</h2>
             <p>Uygulamayı kullanmanız sırasında aşağıdaki veri kategorileri işlenebilir:</p>
@@ -193,7 +205,7 @@
             </ul>
             <p>
               Bu haklarınızı kullanmak için
-              <a href="mailto:talipporhan@icloud.com">talipporhan@icloud.com</a>
+              <a class="inline-link" href="mailto:talipporhan@icloud.com">talipporhan@icloud.com</a>
               üzerinden iletişime geçebilirsiniz.
             </p>
 
@@ -206,17 +218,22 @@
             <h2 id="guncellemeler">9. Güncellemeler</h2>
             <p>Bu metin gerektiğinde güncellenebilir. Güncel sürüm bu sayfada yayınlanır.</p>
           </article>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <footer class="footer">
-        <p class="footer-copy">Bu sayfa, EventOS kullanıcıları için resmi gizlilik ve KVKK bilgilendirmesidir.</p>
-        <nav class="footer-nav" aria-label="Alt gezinme">
-          <a href="./index.html">Ana Sayfa</a>
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <a class="brand footer-brand" href="./index.html">
+          <span class="brand-mark">E</span>
+          <span class="brand-text">EventOS</span>
+        </a>
+        <nav class="footer-links" aria-label="Alt gezinme">
+          <a href="./privacy-policy.html">Gizlilik Politikası</a>
+          <a href="./terms-of-use.html">Kullanım Koşulları</a>
           <a href="./support.html">Destek</a>
-          <a href="./terms-of-use.html">Kullanım Şartları</a>
         </nav>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>
