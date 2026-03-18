@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EventOS</title>
+    <style>
+      :root {
+        --bg: #f4f7f4;
+        --surface: rgba(255, 255, 255, 0.92);
+        --surface-strong: #ffffff;
+        --text: #0f172a;
+        --muted: #5b6b7f;
+        --line: #dde5df;
+        --accent: #13ec5b;
+        --accent-dark: #0d3a1b;
+        --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "SF Pro Display", "Inter", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top right, rgba(19, 236, 91, 0.18), transparent 24%),
+          linear-gradient(180deg, #fbfdfb 0%, var(--bg) 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .shell {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .panel {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(14px);
+      }
+
+      .hero-copy {
+        padding: 32px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+      }
+
+      .brand-mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 18px;
+        background: rgba(19, 236, 91, 0.12);
+        display: grid;
+        place-items: center;
+        color: var(--accent-dark);
+        font-weight: 900;
+        font-size: 24px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.05);
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 14px 0 10px;
+        font-size: clamp(38px, 6vw, 60px);
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+      }
+
+      .lead {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.6;
+        color: var(--muted);
+        max-width: 34rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 18px;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: var(--surface-strong);
+        font-weight: 800;
+      }
+
+      .button-primary {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #092411;
+      }
+
+      .hero-card {
+        padding: 24px;
+        display: grid;
+        gap: 16px;
+      }
+
+      .metric {
+        padding: 18px;
+        border-radius: 22px;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .metric small {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 22px;
+        line-height: 1.1;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      .card {
+        padding: 22px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow);
+      }
+
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 22px;
+        letter-spacing: -0.03em;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .card ul {
+        margin: 14px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 28px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      @media (max-width: 860px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy,
+        .hero-card,
+        .card {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <article class="panel hero-copy">
+          <div class="brand">
+            <div class="brand-mark">E</div>
+            <span class="eyebrow">EventOS</span>
+          </div>
+          <h1>Düğün salonu operasyonunu tek merkezde yönetin.</h1>
+          <p class="lead">
+            EventOS; rezervasyon, takvim, paket, finans ve personel süreçlerini
+            aynı iş akışında toplayan mobil işletme yönetim uygulamasıdır.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./support.html">Destek Sayfası</a>
+            <a class="button" href="./privacy-policy.html">Gizlilik Politikası</a>
+            <a class="button" href="./terms-of-use.html">Kullanım Şartları</a>
+          </div>
+        </article>
+
+        <aside class="panel hero-card">
+          <div class="metric">
+            <small>Odak</small>
+            <strong>Rezervasyon ve tahsilat takibi</strong>
+          </div>
+          <div class="metric">
+            <small>Kullanım</small>
+            <strong>Salon, paket, ekip ve finans yönetimi</strong>
+          </div>
+          <div class="metric">
+            <small>İletişim</small>
+            <strong>talipporhan@icloud.com</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Destek</h2>
+          <p>
+            Kurulum, hesap, erişim, ödeme veya teknik sorunlar için destek
+            sayfasına gidin.
+          </p>
+          <ul>
+            <li>Destek e-postası</li>
+            <li>Sık sorulan sorular</li>
+            <li>Yanıt süresi bilgisi</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Gizlilik</h2>
+          <p>
+            EventOS içinde işlenen veriler, amaçları ve KVKK kapsamındaki
+            haklarınız için gizlilik politikasını inceleyin.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Kullanım Şartları</h2>
+          <p>
+            Hesap kullanımı, abonelik, yasaklı kullanımlar ve sorumluluk sınırı
+            hakkında güncel şartları görün.
+          </p>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <span>Son güncelleme: 15 Mart 2026</span>
+        <nav class="footer-nav">
+          <a href="./support.html">Destek</a>
+          <a href="./privacy-policy.html">Gizlilik Politikası</a>
+          <a href="./terms-of-use.html">Kullanım Şartları</a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>
